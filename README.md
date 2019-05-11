@@ -42,6 +42,11 @@
 - [ ] Create article records with `author_id` attribute filled
 - [ ] In "articles" repository, return aggregate objects including the articles' authors
 
+### Changesets
+
+- [ ] Implement `publish(author, article)` in the articles repository that will use `:create` changeset to create a new article, mark it as published and associate with the author
+- [ ] Implement `unpublish(article)` in the articles repository that will use `:update` changeset to mark the article as not published
+
 ## Further exploration...
 
 ### Building queries
@@ -54,7 +59,3 @@
 - [ ] Write tests for your repository methods
   - Use rom-factory to create records
   - Write tests to assert that repository methods return appropriate records
-
-### Changesets
-
-- [ ] Build and use a custom changeset to transform data before writing

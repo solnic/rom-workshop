@@ -44,6 +44,22 @@ class ArticlesRepo < ROM::Repository[:articles]
   def listing
     articles.combine(:author).published.to_a
   end
+
+  def publish(author, article)
+    articles
+      .changeset(:create, article)
+      .map { |attrs| attrs.merge(published: true) }
+      .associate(author)
+      .commit
+  end
+
+  def unpublish(article)
+    articles
+      .by_pk(article.id)
+      .changeset(:update, article)
+      .map { |attrs| attrs.to_h.merge(published: false) }
+      .commit
+  end
 end
 
 if $0 == __FILE__
