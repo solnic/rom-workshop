@@ -13,9 +13,9 @@ MIGRATION = Persistence.db.migration do
 
     create_table :articles do
       primary_key :id
+      foreign_key :author_id, :authors
       column :title, :text, null: false
       column :published, :boolean, null: false, default: false
-      foreign_key :author_id, :authors
     end
   end
 end
