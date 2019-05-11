@@ -2,7 +2,7 @@ require_relative "spec_helper"
 
 # Load our exercises so we can test the code we've been playing with
 
-require_relative "../persistence_exercises"
+require_relative "../run"
 Persistence.reset_with_migration(MIGRATION)
 Persistence.finalize
 

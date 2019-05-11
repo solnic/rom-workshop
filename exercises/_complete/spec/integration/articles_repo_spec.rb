@@ -12,7 +12,7 @@ RSpec.describe ArticlesRepo do
 
   describe "#listing" do
     it "returns published articles with authors" do
-      articles = repo.listing.to_a
+      articles = repo.listing
 
       expect(articles.length).to eq 1
       expect(articles.first.title).to eq "First test article"
