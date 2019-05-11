@@ -51,7 +51,7 @@
 
 ### Building queries
 
-- [ ] Return results as custom via `.as`
+- [ ] Return custom structs using `map_to`
 - [ ] Investigate using dry-struct to build custom struct classes with strict attribute types
 
 ### Testing
