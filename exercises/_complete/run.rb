@@ -33,22 +33,16 @@ class AuthorsRepo < ROM::Repository[:authors]
 end
 
 class ArticlesRepo < ROM::Repository[:articles]
-  relations :authors
-  commands :create, update: :by_pk
   struct_namespace Entities
+
+  commands :create, update: :by_pk
 
   def by_pk(id)
     articles.by_pk(id).one
   end
 
   def listing
-    articles
-  end
-
-  private
-
-  def articles
-    aggregate(:author).published
+    articles.combine(:author).published.to_a
   end
 end
 

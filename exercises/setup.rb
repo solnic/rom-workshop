@@ -1,9 +1,8 @@
 require "rom"
-require "rom/sql"
 
 module Persistence
   def self.config
-    @config ||= ROM::Configuration.new(:sql, "postgres://localhost/persistence_exercises").tap do |config|
+    @config ||= ROM::Configuration.new(:sql, "postgres://localhost/rom_workshop").tap do |config|
       config.plugin :sql, relations: :auto_restrictions
     end
   end
