@@ -38,7 +38,6 @@ GEM
       concurrent-ruby (~> 1.0)
     ice_nine (0.11.2)
     method_source (0.9.2)
-    pg (1.1.4)
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
@@ -89,6 +88,7 @@ GEM
       rspec-support (~> 3.8.0)
     rspec-support (3.8.0)
     sequel (5.20.0)
+    sqlite3 (1.4.1)
     transproc (1.0.3)
 
 PLATFORMS
@@ -96,12 +96,12 @@ PLATFORMS
 
 DEPENDENCIES
   database_cleaner
-  pg
   pry
   rom (~> 5.0)
   rom-factory (~> 0.8)
   rom-sql (~> 3.0)
   rspec (~> 3.8)
+  sqlite3
 
 BUNDLED WITH
    2.0.1

@@ -2,7 +2,7 @@ require "rom"
 
 module Persistence
   def self.config
-    @config ||= ROM::Configuration.new(:sql, "postgres://localhost/rom_workshop").tap do |config|
+    @config ||= ROM::Configuration.new(:sql, "sqlite::memory:").tap do |config|
       config.plugin :sql, relations: :auto_restrictions
     end
   end

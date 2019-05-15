@@ -4,7 +4,7 @@
 
 ### Setup
 
-- [ ] Create a `rom_workshop` local Postgres database
+- [ ] `bundle install`
 
 ### Getting started, writing data
 
