@@ -36,7 +36,7 @@
   - `id` primary key and `name` text column
   - add `author_id` foreign key to "articles" table
 - [ ] Add a relation for the table and declare associations
-  - declare `belongs_to :author` assocition in "articles" relation
+  - declare `belongs_to :author` association in "articles" relation
 - [ ] Create a repository for authors, with "create" command enabled
 - [ ] Create author records
 - [ ] Create article records with `author_id` attribute filled
